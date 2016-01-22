@@ -29,8 +29,9 @@
                    HorizontalAlignment="Center"
                    TextWrapping="Wrap" />
         
-        <Button Width="60" Height="30" Command="{Binding ClickMeCommand}">Click Me!</Button>
-        <Button Width="60" Height="30" Command="{Binding QuitCommand}">Quit</Button>
+        <Button Width="100" Height="30" Command="{Binding ClickMeCommand}">Click Me!</Button>
+        <Button Width="100" Height="30" Command="{Binding VersionCommand}">Show Version</Button>
+        <Button Width="100" Height="30" Command="{Binding QuitCommand}">Quit</Button>
 
     </StackPanel>
 </Window>

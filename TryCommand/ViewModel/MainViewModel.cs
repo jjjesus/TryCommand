@@ -4,6 +4,8 @@ using System;
 using System.Windows;
 using TryCommand.Model;
 
+using TryCommand.View;
+
 namespace TryCommand.ViewModel
 {
     /// <summary>
@@ -133,6 +135,26 @@ namespace TryCommand.ViewModel
             {
                 Application.Current.Shutdown();
             }
+        }
+
+        private RelayCommand _versionCommand;
+
+        /// <summary>
+        /// Gets the VersionCommand.
+        /// </summary>
+        public RelayCommand VersionCommand
+        {
+            get
+            {
+                return _versionCommand
+                    ?? (_versionCommand = new RelayCommand(ExecuteVersionCommand));
+            }
+        }
+
+        private void ExecuteVersionCommand()
+        {
+            var about = new About();
+            about.ShowDialog();
         }
 
         ////public override void Cleanup()
